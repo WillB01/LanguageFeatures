@@ -15,9 +15,9 @@ namespace LanguageFeatures.Controllers
 
             foreach (Product item in Product.GetProducts())
             {
-                string name = item?.Name;
-                decimal? price = item?.Price;
-                string relatedName = item?.Related?.Name;
+                string name = item?.Name ?? "<No Name>";
+                decimal? price = item?.Price ?? 0;
+                string relatedName = item?.Related?.Name  ?? "<None>";
 
                 results.Add(string.Format(
                     "name: {0}, Price: {1}, Related: {2}"
