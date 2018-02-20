@@ -18,8 +18,9 @@ namespace LanguageFeatures.Controllers
                 string name = item?.Name;
                 decimal? price = item?.Price;
                 string relatedName = item?.Related?.Name;
+
                 results.Add(string.Format(
-                    "name: {0}, Price: {1}, Related: {2}}"
+                    "name: {0}, Price: {1}, Related: {2}"
                     , name, price, relatedName));
 
             }
